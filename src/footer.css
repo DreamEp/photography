@@ -1,0 +1,40 @@
+.main-footer {
+    color: white;
+    background-color: Gray;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-top: 2em;
+}
+
+.container{
+    text-align: center;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+}
+
+.col-sm{
+    text-align: center;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+a:visited {
+color: white;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:hover {
+color: gold;
+background-color: transparent;
+text-decoration: none;
+}

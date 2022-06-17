@@ -103,7 +103,6 @@
 }
 
 .model.open svg.right{
-    visibility: visible;
     top: 50%;
 }
 
@@ -112,4 +111,11 @@
     left: 10px;
 }
 
+.model.open svg.right.hidden{
+    display: none;
+}
+
+.model.open svg.left.hidden{
+    display: none;
+}
 

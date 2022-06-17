@@ -8,13 +8,13 @@ import Img1 from './img/1.png';
 import Img2 from './img/2.jpg';
 import Img3 from './img/3.jpg';
 import Img4 from './img/4.png';
-import Img5 from './img/5.jpg';
+import Img5 from './img/5.png';
 import Img6 from './img/6.jpg';
 import Img7 from './img/7.jpg';
 import Img8 from './img/8.jpg';
 import Img9 from './img/9.png';
 import Img10 from './img/10.jpg';
-import Img11 from './img/11.jpg';
+import Img11 from './img/11.png';
 
 
 const Gallery = () => {
@@ -66,8 +66,10 @@ const Gallery = () => {
         }
     ];
     const [model, setModel] = useState(false);
+    const [afk, setAfk] = useState(false);
     const [tempingSrc, setTempingSrc] = useState('');
     const [tempingId, setTempingId] = useState()
+
     const getImg = (imgSrc, id) => {
         setTempingSrc(imgSrc);
         setTempingId(id);
@@ -91,24 +93,44 @@ const Gallery = () => {
         
     }
 
-    /*document.addEventListener('mousemove', function(e) {
-        let rightArrow = document.getElementById('right');
-        let leftArrow = document.getElementById('left');
+    // Create an afk checker if the user is inactive on the image show, to hide or not the arrows
+    var timeoutInMiliseconds = 2000;
+    var timeoutId; 
 
-        if (!rightArrow.contains(e.target)) {
-            rightArrow.style.visibility = 'visible';
-        }
-    });*/
+    function resetTimer() { 
+        setAfk(false);
+        window.clearTimeout(timeoutId)
+        startTimer();
+    }
+    
+    function startTimer() { 
+        timeoutId = window.setTimeout(doInactive, timeoutInMiliseconds)
+    }
+    
+    function doInactive() {
+        setAfk(true);
+    }
+    
+    function setupTimers () {
+        document.addEventListener("mousemove", resetTimer, false);
+        document.addEventListener("mousedown", resetTimer, false);
+        document.addEventListener("touchmove", resetTimer, false);
+        
+        startTimer();
+    }
 
+    
     return (
         <>
+        {/* Displayed image when clicked */}
         <div className={model ? "model open" : "model"}>
-            <img  src={tempingSrc} alt="My Awesome Image3" />
+            <img  src={tempingSrc} alt="My Awesome Image3" onMouseMove={() => setupTimers()}/>
             <CloseIcon onClick={() => setModel(false)}/>
-            <ArrowRightIcon id="right" className="right" onClick={() => nextImg(tempingId)} />
-            <ArrowLeftIcon id="left" className="left" onClick={() => previousImg(tempingId)}/>
+            <ArrowRightIcon className={afk ? "right hidden" : "right"} onClick={() => nextImg(tempingId)} />
+            <ArrowLeftIcon className={afk ? "left hidden" : "left"} onClick={() => previousImg(tempingId)}/>
         </div>
 
+        {/* Display all the images in a gallery with onClick listener to diplay the image full size */}
         <div className="gallery">
             {data.map((item, index) => {
                 return(
