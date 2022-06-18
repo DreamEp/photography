@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import './gallery.css';
+import BackToTopButton from './BackToTopButton'
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowRightIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowLeftIcon from '@mui/icons-material/ArrowBackIosNew';
 
-import Img1 from './img/1.png';
-import Img2 from './img/2.jpg';
-import Img3 from './img/3.jpg';
-import Img4 from './img/4.png';
-import Img5 from './img/5.png';
-import Img6 from './img/6.jpg';
-import Img7 from './img/7.jpg';
-import Img8 from './img/8.jpg';
-import Img9 from './img/9.png';
-import Img10 from './img/10.jpg';
-import Img11 from './img/11.png';
+import Img1 from '../img/1.png';
+import Img2 from '../img/2.jpg';
+import Img3 from '../img/3.jpg';
+import Img4 from '../img/4.png';
+import Img5 from '../img/5.png';
+import Img6 from '../img/6.jpg';
+import Img7 from '../img/7.jpg';
+import Img8 from '../img/8.jpg';
+import Img9 from '../img/9.png';
+import Img10 from '../img/10.jpg';
+import Img11 from '../img/11.png';
 
 
 const Gallery = () => {
@@ -94,7 +95,7 @@ const Gallery = () => {
     }
 
     // Create an afk checker if the user is inactive on the image show, to hide or not the arrows
-    var timeoutInMiliseconds = 2000;
+    var timeoutInMiliseconds = 4000;
     var timeoutId; 
 
     function resetTimer() { 
@@ -139,6 +140,8 @@ const Gallery = () => {
                     </div>
                 )
             })}
+            <BackToTopButton />
+
         </div>
         </>
     )
