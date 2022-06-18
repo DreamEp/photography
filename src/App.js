@@ -3,6 +3,8 @@ import "./App.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PageHolder from './components/PageHolder';
+import BackToTopButton from './components/BackToTopButton';
+
 
 
 
@@ -15,7 +17,8 @@ function App() {
         <div className="content-wrap">
           {/*<h1 style ={{textAlign: 'center'}}>Image Gallery</h1>
           <Gallery />   */}
-          <PageHolder />   
+          <PageHolder />
+          <BackToTopButton />   
         </div>
         <Footer />
       </div>
