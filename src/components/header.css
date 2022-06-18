@@ -1,0 +1,31 @@
+.main-header{
+    color: Gray;
+    background-color: White;
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.navigation:link {
+    color: Gray;
+}
+  
+.navigation:visited {
+    color: Gray;
+}
+
+
+.logo{
+    transform: scale(2);
+    position: relative;
+    left: 49.5%;
+}
+
+.logo:hover {
+    background-color: transparent;
+    text-decoration: none;
+    transform: scale(2.5);
+    cursor: pointer;
+}
