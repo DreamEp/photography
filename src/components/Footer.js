@@ -1,29 +1,30 @@
 import React from 'react';
 import './footer.css';
 import { NavLink } from 'react-router-dom';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
 
 
 const Footer = () => {
     return(
         <div className="main-footer">
             <div className="container">
+                {/* Ajout de cliquable dans le footer 
                 <div className="row">
-                    {/* Column 1 */}
-                    <div className="col" style={{marginTop: '-1.3em'}}>
-                        <h4>
-                            <a href="" target="_blank">About Us</a>
+                    <div className="col">
+                        <h4 classname="clickable-footer">
+                            <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">About Us</a>
                         </h4>
                         <div className="list-unstyled">
-                            <li>123</li>
-                            <li>456</li>
-                            <li>789</li>
+                            <li>1231</li>
+                            <li>4561</li>
+                            <li>7891</li>
                         </div>                    
                     </div>
 
-                    {/* Column 2 */}
                     <div className="col">
-                        <h4>
-                            <a href="" target="_blank">About Us2</a>
+                        <h4 classname="clickable-footer">
+                            <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">About Us2</a>
                         </h4>
                         <div className="list-unstyled">
                             <li>1232</li>
@@ -32,10 +33,9 @@ const Footer = () => {
                         </div>                    
                     </div>
 
-                    {/* Column 3 */}
                     <div className="col">
-                        <h4>
-                            <a href="" target="_blank">About Us3</a>
+                        <h4 classname="clickable-footer">
+                            <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">About Us3</a>
                         </h4>
                         <div className="list-unstyled">
                             <li>1233</li>
@@ -43,8 +43,11 @@ const Footer = () => {
                             <li>7893</li>
                         </div>                    
                     </div>
-                </div>                
+                </div>  */}   
+                <InstagramIcon />    
+                <PinterestIcon />       
             </div>
+            
             <hr/>
             <div className="row">
                 <p className="col-sm">

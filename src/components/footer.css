@@ -4,17 +4,32 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    padding-top: 2em;
+    padding-top: 4em;
 }
 
 .container{
-    text-align: center;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-49%);
+    top: 25%;
+    transform: translateY(-25%);
+}
+
+svg{
+    transform: scale(1.4);
+    cursor: pointer;
+    color: white;
+    padding-right: 10px;;
+}
+
+.col{
+    position: relative;
+}
+
+.clickable-footer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .col-sm{
