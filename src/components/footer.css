@@ -28,13 +28,13 @@ a:link {
 }
   
 a:visited {
-color: white;
-background-color: transparent;
-text-decoration: none;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 a:hover {
-color: gold;
-background-color: transparent;
-text-decoration: none;
+    color: gold;
+    background-color: transparent;
+    text-decoration: none;
 }

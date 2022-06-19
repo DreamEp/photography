@@ -1,5 +1,7 @@
 import React from 'react';
 import './footer.css';
+import { NavLink } from 'react-router-dom';
+
 
 const Footer = () => {
     return(
@@ -46,7 +48,7 @@ const Footer = () => {
             <hr/>
             <div className="row">
                 <p className="col-sm">
-                    &copy; {new Date().getFullYear()} DreamEp INC | All rights reserved | <a href="" target="_blank">Privacy Policy</a> | <a href="/about/about_team.htm" target="_blank">Terms of Service</a>
+                    &copy; {new Date().getFullYear()} DreamEp INC | All rights reserved | <NavLink to='/privacy-policy' >Privacy Policy</NavLink> |  <NavLink to='/terms-and-conditions' >Terms and Conditions</NavLink>
                 </p>
             </div>
         </div>

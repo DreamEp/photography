@@ -90,8 +90,7 @@ const Gallery = () => {
             const imgSrc = data[index-1].imgSrc;
             getImg(imgSrc, index);
             setTempingId(index-1);
-        }   
-        
+        }           
     }
 
     // Create an afk checker if the user is inactive on the image show, to hide or not the arrows
@@ -140,8 +139,6 @@ const Gallery = () => {
                     </div>
                 )
             })}
-            <BackToTopButton />
-
         </div>
         </>
     )

@@ -1,7 +1,18 @@
 .main-header{
     color: Gray;
-    background-color: White;
-    position: relative;
+    background-color: transparent;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.header{
+    color: Gray;
+    background-color: black;
+    display: block;
     top: 0;
     width: 100%;
     padding-top: 2em;
@@ -9,18 +20,19 @@
 }
 
 .navigation:link {
-    color: Gray;
+    color: Black;
 }
   
 .navigation:visited {
-    color: Gray;
+    color: Black;
 }
 
 
 .logo{
     transform: scale(2);
     position: relative;
-    left: 49.5%;
+    left: 49%;
+    z-index: -999;
 }
 
 .logo:hover {
