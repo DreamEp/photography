@@ -15,14 +15,11 @@ function App() {
       <div className="page-container">
         <Header />
         <div className="content-wrap">
-          {/*<h1 style ={{textAlign: 'center'}}>Image Gallery</h1>
-          <Gallery />   */}
           <PageHolder />
           <BackToTopButton />   
         </div>
         <Footer />
-      </div>
-      
+      </div>     
    </>
   );
 }
