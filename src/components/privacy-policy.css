@@ -1,0 +1,25 @@
+.privacy-policy{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5em;
+    text-align: justify
+}
+
+.privacy-policy hr{
+    margin-right: 96%;
+}
+
+.privacy-policy h1{
+    font-size: 35px;
+}
+
+.privacy-policy h3{
+    padding-bottom: 1em;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.privacy-policy p{
+    font-size: 21px;
+    font-weight: 200;
+}
