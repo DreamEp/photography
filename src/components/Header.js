@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './header.css';
 import { NavLink } from 'react-router-dom';
 import DiamondIcon from '@mui/icons-material/Diamond';
-import { useLocation } from 'react-router-dom'
 
 
 const Header = () => {
@@ -28,7 +27,7 @@ const Header = () => {
         })
     }, [])
 
-    return <div className={home ? "main-header" : "header"}>
+    return <div className="main-header"/*{home ? "main-header" : "header"}*/>
         {logo && (
             <NavLink className="navigation" to='/'>
                 <DiamondIcon className="logo"/>            
