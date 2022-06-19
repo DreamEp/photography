@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './gallery.css';
-import BackToTopButton from './BackToTopButton'
+import { useLocation } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowRightIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowLeftIcon from '@mui/icons-material/ArrowBackIosNew';
@@ -19,6 +19,47 @@ import Img11 from '../img/11.png';
 
 
 const Gallery = () => {
+
+    let clickedName = useLocation().pathname;
+    console.warn(clickedName);
+
+    //let  = [];
+
+    let landscape = [
+        {
+            id : 1,
+            imgSrc: Img3,
+        },
+        {
+            id : 2,
+            imgSrc: Img6,
+        },
+        {
+            id : 3,
+            imgSrc: Img7,
+        },
+        {
+            id : 4,
+            imgSrc: Img9,
+        },
+    ];
+
+    let portrait = [
+        {
+            id : 1,
+            imgSrc: Img4,
+        },
+        {
+            id : 2,
+            imgSrc: Img5,
+        },
+        {
+            id : 3,
+            imgSrc: Img11,
+        },
+    ];
+
+    let photoshop = [];
 
     let data = [
         {
@@ -119,12 +160,24 @@ const Gallery = () => {
         startTimer();
     }
 
+    //To call before render
+    function chooseImageToDisplay () {
+        if(clickedName === "/landscape"){
+            data = landscape;
+        }
+        else if(clickedName === "/portrait"){
+            data = portrait;
+        }
+        else{
+            data = photoshop;
+        }
+    }
     
     return (
         <>
         {/* Displayed image when clicked */}
-        <div className={model ? "model open" : "model"}>
-            <img  src={tempingSrc} alt="My Awesome Image3" onMouseMove={() => setupTimers()}/>
+        <div className={model ? "model open" : "model"} >
+            <img  src={tempingSrc} alt="My Awesome Image3" onMouseMove={() => setupTimers()} onClick={() => nextImg(tempingId)}/>
             <CloseIcon onClick={() => setModel(false)}/>
             <ArrowRightIcon className={afk ? "right hidden" : "right"} onClick={() => nextImg(tempingId)} />
             <ArrowLeftIcon className={afk ? "left hidden" : "left"} onClick={() => previousImg(tempingId)}/>
