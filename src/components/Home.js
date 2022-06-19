@@ -37,7 +37,7 @@ const Home = () => {
             {data.map((item, index) => {
                 return(
                     <div className="pics" key ={index} onClick={() => getImg(item.imgSrc, item.id)}>
-                        <NavLink to='/Gallery'>
+                        <NavLink to='/gallery' >
                             <img className="img" src={item.imgSrc} style={{width : '100%'}} alt="My Awesome Image2"/>
                         </NavLink>
                     </div>
