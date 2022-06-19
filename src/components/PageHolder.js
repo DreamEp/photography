@@ -10,7 +10,9 @@ import TermsAndConditions from './TermsAndConditions'
 const PageHolder = () => (
     <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/gallery' element={<Gallery/>}></Route>
+        <Route path='/landscape' element={<Gallery/>}></Route>
+        <Route path='/portrait' element={<Gallery/>}></Route>
+        <Route path='/photoshop' element={<Gallery/>}></Route>
         <Route path='/privacy-policy' element={<PrivacyPolicy/>}></Route>
         <Route path='/terms-and-conditions' element={<TermsAndConditions/>}></Route>
     </Routes>
