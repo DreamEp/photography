@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.css';
 import Home1 from '../img/home1.jpg';
@@ -10,36 +10,32 @@ const Home = () => {
         {
             id : 1,
             imgSrc: Home1,
+            description: 'Landscape',
         },
         {
             id : 2,
             imgSrc: Home2,
+            description: 'Portrait',
+
         },
         {
             id : 3,
             imgSrc: Home3,
+            description: 'Photoshop',
         }
     ];
-
-    const [model, setModel] = useState(false);
-    const [tempingSrc, setTempingSrc] = useState('');
-    const [tempingId, setTempingId] = useState()
-
-    const getImg = (imgSrc, id) => {
-        setTempingSrc(imgSrc);
-        setTempingId(id);
-        setModel(true);
-    }
 
     return(
         <>
         <div className="menu">
             {data.map((item, index) => {
+                let description = item.description.toLocaleLowerCase();
                 return(
-                    <div className="pics" key ={index} onClick={() => getImg(item.imgSrc, item.id)}>
-                        <NavLink to='/gallery' >
-                            <img className="img" src={item.imgSrc} style={{width : '100%'}} alt="My Awesome Image2"/>
+                    <div className={`pics ${description}`}>
+                        <NavLink to={{pathname: description, state: {clickedName: description}}} >
+                            <img className="img" src={item.imgSrc} style={{width : '100%'}} alt={item.description}></img>
                         </NavLink>
+                        <h3 className="description">{item.description}</h3>
                     </div>
                 )
             })}
