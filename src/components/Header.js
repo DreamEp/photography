@@ -5,7 +5,7 @@ import DiamondIcon from '@mui/icons-material/Diamond';
 
 
 const Header = () => {
-    const [home, setHome] = useState(true);
+    //const [home, setHome] = useState(true);
     const [logo, setLogo] = useState(false);
 
     /*

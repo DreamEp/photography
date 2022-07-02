@@ -2,12 +2,20 @@
   text-align: center;
 }
 
-.page-container{
-  background-color:#fffdd0;
-}
-
-.page-container{
+.full-page-container{
+  /*height: 100vh;*/
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+}
+
+
+.page-container{
+  background-color:#fffdd0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.main-header{
+  z-index: 999;
 }

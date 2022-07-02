@@ -13,10 +13,12 @@ function App() {
   return (
    <>
       <div className="page-container">
+        <div className="full-page-container">
         <Header />
-        <div className="content-wrap">
-          <PageHolder />
-          <BackToTopButton />   
+          <div className="content-wrap">
+            <PageHolder />
+            <BackToTopButton />   
+          </div>
         </div>
         <Footer />
       </div>     

@@ -33,13 +33,15 @@
     color: Black;
 }
 
+.svg{
+    transform: translate(-50%);
+}
 
 .logo{
-    transform: scale(2) translateX(-50%);
     position: absolute;
     left: 50%;
-    z-index: 999;
-    color: Black;
+    transform: scale(2);
+    color: black;
 }
 
 .logo:hover {
@@ -47,6 +49,6 @@
     text-decoration: none;
     cursor: pointer;
     opacity: 0.5;
-    color: Black;
+    color: black;
 
 }
