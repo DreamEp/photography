@@ -6,7 +6,7 @@
     -moz-column-width: 33%;
     column-width: 33%;
     margin: 0 0 -4px 0;   
-    column-gap: 0em; 
+    column-gap: 0em;
 }
 
 .menu .pics{
@@ -22,7 +22,7 @@
     transform: scale(1.15);
     transition-duration: 450ms;
 }
-
+/*
 @media (max-width: 1090px){
     .menu{
         -webkit-column-count: 2;
@@ -43,7 +43,7 @@
         -moz-column-width: 100%;
         column-width: 100%;
     }
-}
+}*/
 
 .description{
     color: White;
